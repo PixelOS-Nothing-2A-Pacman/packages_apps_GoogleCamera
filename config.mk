@@ -14,7 +14,7 @@
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    $(call my-dir)/system/etc/permissions/privapp-permissions-gcam.xml:system/etc/permissions/privapp-permissions-gcam.xml
+    $(LOCAL_PATH)/privapp-permissions-gcam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-gcam.xml
 
 PRODUCT_PACKAGES += \
     GoogleCamera

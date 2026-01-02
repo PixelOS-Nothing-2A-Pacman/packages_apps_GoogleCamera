@@ -9,9 +9,17 @@ android_vendor_GoogleCamera
    ```bash
     cd vendor/GoogleCamera/prebuilt
     7z x xxx.7z.001
+    mv xxx.apk Gcam.apk
    ```
 
-3. Add this line to your `device.mk` file in your device tree:
+3. Extract the library files from the APK:
+   **Linux:**
+   ```bash
+    cd vendor/GoogleCamera/prebuilt
+    unzip -o Gcam.apk 'lib/arm64-v8a/*' -d .
+   ```
+
+4. Add this line to your `device.mk` file in your device tree:
    ```make
    $(call inherit-product-if-exists, vendor/GoogleCamera/config.mk)
    ```
